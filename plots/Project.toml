@@ -1,0 +1,13 @@
+name = "plots"
+uuid = "6e6fbfbd-e4d3-4dd2-828f-593deb7be0d9"
+authors = ["nucklass <60252281+nucklass@users.noreply.github.com>"]
+version = "0.1.0"
+
+[deps]
+Franklin = "713c75ef-9fc9-4b05-94a9-213340da978e"
+IOCapture = "b5f81e59-6552-4d32-b1f0-c071b021bf89"
+PlotlyJS = "f0f68f2c-4968-5e81-91da-67840de0976a"
+Soss = "8ce77f84-9b61-11e8-39ff-d17a774bf41c"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+VegaDatasets = "0ae4a718-28b7-58ec-9efb-cded64d6d5b4"
+VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"

@@ -15,8 +15,8 @@ var data = [
   
       type: 'heatmap',
       colorscale : [
-        [0, '#3D9970'],
-        [1, '#001f3f']
+        [0, '#3deb34'],
+        [1, '#000000']
       ], 
       x : ["there", "is", "a", "creep", "er", "in", "my", "bed"]
     }

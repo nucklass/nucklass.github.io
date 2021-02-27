@@ -24,8 +24,8 @@ var data = [
   
   var layout = {
     autosize: false,
-    with: 350,
-    height: 700,
+    width: 450,
+    height: 550,
     showlegend: false
   }
   

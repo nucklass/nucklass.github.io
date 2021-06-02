@@ -1,5 +1,6 @@
 [deps]
 AbstractGPs = "99985d1d-32ba-4be9-9821-2ec096f28918"
+BSON = "fbb218c0-5317-5bc6-957e-2ee96dd4b1f0"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 DataTools = "96c8136d-373b-4a4f-9482-8552faa6eb26"
@@ -15,3 +16,4 @@ ReverseDiff = "37e2e3b7-166d-5795-8a7a-e32c996b4267"
 Tracker = "9f7883ad-71c0-57eb-9f7f-b5c9e6d3789c"
 Transducers = "28d57a85-8fef-5791-bfe6-a80928e7c999"
 Turing = "fce5fe82-541a-59a6-adf8-730c64b5f9a0"
+Vinyl = "83e47e11-4a7a-5bf8-892c-11f81bf9b223"

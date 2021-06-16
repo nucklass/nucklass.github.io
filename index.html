@@ -70,7 +70,7 @@
         type = type[type.length - 1];
         if (type == 'Float32') spec.data = readFloat32(spec.data.buffer);
         else if (type == 'Int32') spec.data = readInt32(spec.data.buffer);
-        else if (type == 'Nothing') spec.data =null;
+        else if (type == 'Nothing') spec.data = null;
         else throw `Array type ${spec.type.name} not supported.`;
         let array = tf.tensor(spec.data, spec.size.reverse());
         return array
@@ -93,7 +93,7 @@
         return convertArrays_(data)
       }
 
-      async function fetchModel(url) {
+      async function fetchWeights(url) {
         ws = await fetchBlob(url);
         return ws.weights;
       }

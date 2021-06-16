@@ -53,3 +53,4 @@ weights = Flux.params(model)
 
 BSON.@save "anime.bson"  model
 BSON.@save "anime_weights.bson" weights
+JLD2.@save "anime.jld2" model

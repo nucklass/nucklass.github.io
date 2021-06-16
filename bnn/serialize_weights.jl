@@ -40,8 +40,8 @@ function nn_create_instance(θ::AbstractVector, network_shape::AbstractVector)
     weights, biases = unpack(θ, network_shape)
     layers = []
     for i in eachindex(network_shape)
-        push!(layers, Dense(weights[i],
-            biases[i],
+        push!(layers, Dense(Float32.(weights[i]),
+            Float32.(biases[i]),
             eval(network_shape[i][3])))
     end
     nn = Chain(layers...)

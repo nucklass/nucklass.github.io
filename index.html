@@ -94,7 +94,7 @@
 
       async function fetchWeights(url) {
         ws = await fetchBlob(url);
-        return ws.weights;
+        return ws.model;
       }
 
       const _data = t => (t instanceof tf.Tensor) ? t.dataSync() : t;

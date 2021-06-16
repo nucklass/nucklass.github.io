@@ -92,9 +92,9 @@
         return convertArrays_(data)
       }
 
-      async function fetchWeights(url) {
+      async function fetchModel(url) {
         ws = await fetchBlob(url);
-        return ws.model;
+        return ws.weights;
       }
 
       const _data = t => (t instanceof tf.Tensor) ? t.dataSync() : t;

@@ -50,4 +50,4 @@ end
 
 bnn_1_website = nn_create_instance(map_est,network_shape)
 
-BSON.@save
+BSON.@save "anime.bson"  bnn_1_website

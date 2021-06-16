@@ -19,7 +19,8 @@
   <script>
     flux = (function () {
 
-let Buffer = new BSON().serialize({}).constructor
+
+let Buffer = new BSON.serialize({}).constructor
 
 function blobAsArrayBuffer(blob) {
   return new Promise((resolve, reject) => {
@@ -41,7 +42,7 @@ async function fetchBytes(url) {
 
 async function fetchData(url) {
   let buf = await fetchBytes(url);
-  return new BSON().deserialize(buf);
+  return new BSON.deserialize(buf);
 }
 
 // `buf` is a Uint8Array from BSON

@@ -49,7 +49,7 @@ function nn_create_instance(θ::AbstractVector, network_shape::AbstractVector)
 end
 
 model = nn_create_instance(map_est,network_shape)
-weights = Flux.params(model) ;
+weights = Flux.params(model).order.data ;
 
 BSON.@save "anime.bson"  model
 BSON.@save "anime_weights.bson" weights

@@ -102,11 +102,16 @@
         return ws.weights;
       }
 
+      async function fetchModel(url) {
+        ws = await fetchBlob(url);
+        return ws.model;
+      }
+
       const _data = t => (t instanceof tf.Tensor) ? t.dataSync() : t;
       const slice = t => (t instanceof tf.Tensor) ? t.clone() : (
         t instanceof Array ? t.slice() : t);
 
-      return { fetchData, fetchWeights, fetchBlob, data: _data, slice, convertArrays_ };
+      return { fetchData, fetchWeights, fetchBlob, fetchModel,data: _data, slice, convertArrays_ };
 
     })();
   </script>

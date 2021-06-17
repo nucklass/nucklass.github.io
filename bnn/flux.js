@@ -89,13 +89,13 @@ flux = (function () {
 
     async function fetchVarWeights(url){
         flux_ws = await fetchWeights(url);
-        return flux_ws.map((x) => tf.Variables(x));
+        return flux_ws.map((x) => tf.Variable(x));
     }
 
     const _data = t => (t instanceof tf.Tensor) ? t.dataSync() : t;
     const slice = t => (t instanceof tf.Tensor) ? t.clone() : (
       t instanceof Array ? t.slice() : t);
     
-    return { fetchData, fetchWeights, fetchVarWeights,fetchBlob, fetchModel,data: _data, slice, convertArrays_ };
+    return { fetchData, fetchWeights, fetchVarWeights,fetchBlob, fetchModel, data: _data, slice, convertArrays_ };
 
   })();

@@ -96,6 +96,6 @@ flux = (function () {
     const slice = t => (t instanceof tf.Tensor) ? t.clone() : (
       t instanceof Array ? t.slice() : t);
     
-    return { fetchData, fetchWeights, fetchBlob, fetchModel,data: _data, slice, convertArrays_ };
+    return { fetchData, fetchWeights, fetchVarWeights,fetchBlob, fetchModel,data: _data, slice, convertArrays_ };
 
   })();

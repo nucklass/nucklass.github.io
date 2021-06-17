@@ -1,3 +1,3 @@
 let weights = [] ;
 
-fetchVarWeights("./bnn/anime_weights.bson");
+flux.fetchVarWeights("./bnn/anime_weights.bson");

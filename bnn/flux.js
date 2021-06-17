@@ -89,7 +89,7 @@ flux = (function () {
 
     async function fetchVarWeights(url){
         flux_ws = await fetchWeights(url);
-        return flux_ws.map((x) => tf.Variable(x));
+        return flux_ws.map((x) => tf.variable(x));
     }
 
     const _data = t => (t instanceof tf.Tensor) ? t.dataSync() : t;

@@ -24,3 +24,17 @@ function model(data){
               .sigmoid();
   return score;
 }
+
+function score_data(){
+  data = []
+  if (document.getElementById("completed").checked){
+    data[0] = 1;
+  } else{
+    data[0] = 0
+  }
+  data[1] = parseFloat(document.getElementById("rating"));
+  data[2] = parseFloat(document.getElementById("episodes"));
+
+  document.getElementById("scorebox").innerText = model(tf.tensor(data));
+  return 0
+}

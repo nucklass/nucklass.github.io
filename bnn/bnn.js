@@ -25,6 +25,7 @@ function model(data){
   return score;
 }
 
+// grab input data and use model to give probablility
 function score_data(){
   data = []
   if (document.getElementById("complete").checked){

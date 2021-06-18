@@ -27,7 +27,7 @@ function model(data){
 
 function score_data(){
   data = []
-  if (document.getElementById("completed").checked){
+  if (document.getElementById("complete").checked){
     data[0] = 1;
   } else{
     data[0] = 0

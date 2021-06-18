@@ -146,7 +146,12 @@
     <div class="w3-container" id="bnn" style="margin-top:75px">
       <h1 class="w3-xxxlarge w3-text-light-green"><b>Second season?</b></h1>
       <hr style="width:50px;border:5px solid black" class="w3-round">
-      <p>Uses data gathered from the My Anime List Website</p>
+      <p>Uses data gathered from the <a href="https://myanimelist.net/">My Anime List website</a> to output the probablility that
+        a given anime series will get a second season. Under the hood, I'm using a neural network with parameters estimated via bayesian
+        inference, specifically Hamiltonian Monte Carlo simulation. This is version 0.1, and more of a proof of concept (for myself) that models like
+        this can be run in browser. I hope to re-estimate parameters and try out more novel and interesting models in the future. 
+        Model specified with Flux.jl and Turing.jl, trained with AdvancedHMC.jl, and is running in the browser with Tensorflow.js.
+      </p>
     </div>
 
     <div class="w3-container w3-light-green">

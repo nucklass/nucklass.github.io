@@ -12,6 +12,7 @@ for(i=0; i=weightsandbiases.length;i++){
     else mod_weights[(i/2 + .5)] = weightsandbiases[i]
 }
 
+// upload model weights to re-constructed neural net specs
 function model(data){
   score = data.matMul(weightsandbiases[0])
               .add(weightsandbiases[1])

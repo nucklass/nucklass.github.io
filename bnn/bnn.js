@@ -1,5 +1,5 @@
 let weightsandbiases = []
-
+// import map estimates for weights from julia
 flux.fetchVarWeights("./bnn/anime_weights.bson").then((function (ws) {
     return weightsandbiases = ws;
   }));

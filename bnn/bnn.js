@@ -4,8 +4,8 @@ flux.fetchVarWeights("./bnn/anime_weights.bson").then((function (ws) {
     return weightsandbiases = ws;
   }));
 
-let mod_weights = []
-let mod_biases = []
+var  mod_weights = []
+var  mod_biases = []
 var i;
 for(i=0; i=weightsandbiases.length;i++){
     if (i % 2 == 0) mod_biases[(i/2)] = weightsandbiases[i]
@@ -36,6 +36,6 @@ function score_data(){
   data[1] = parseFloat(document.getElementById("rating"));
   data[2] = parseFloat(document.getElementById("episodes"));
 
-  document.getElementById("scorebox").innerText = model(tf.tensor(data));
+  document.getElementById("scorebox").innerText = model(tf.tensor(data).reshape([1,2]));
   return 0
 }

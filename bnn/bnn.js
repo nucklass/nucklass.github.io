@@ -36,6 +36,6 @@ function score_data(){
   data[1] = parseFloat(document.getElementById("rating"));
   data[2] = parseFloat(document.getElementById("episodes"));
 
-  document.getElementById("scorebox").innerText = model(tf.tensor(data).reshape([1,2]));
+  document.getElementById("scorebox").innerText = model(tf.tensor(data).reshape([1,3]));
   return 0
 }

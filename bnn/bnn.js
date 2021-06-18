@@ -29,10 +29,12 @@ function model(data){
 // grab input data and use model to give probablility
 function score_data(){
   data = []
-  data[0] = parseFloat(document.getElementById("completed").value);
+  data[0] = parseFloat(document.getElementById("complete").value);
   data[1] = parseFloat(document.getElementById("rating").value);
   data[2] = parseFloat(document.getElementById("episodes").value);
 
-  document.getElementById("scorebox").innerText = model(tf.tensor(data).reshape([1,3]));
+  model(tf.tensor(data).reshape([1,3])).data().then(function(x){
+    document.getElementById("scorebox").innerText = (x[0] *100).toPrecision(4) + "%" 
+  });
   return 0
 }

@@ -29,11 +29,7 @@ function model(data){
 // grab input data and use model to give probablility
 function score_data(){
   data = []
-  if (document.getElementById("complete").checked){
-    data[0] = 1;
-  } else{
-    data[0] = 0
-  }
+  data[0] = parseFloat(document.getElementById("completed").value);
   data[1] = parseFloat(document.getElementById("rating").value);
   data[2] = parseFloat(document.getElementById("episodes").value);
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>My Probabalistic Program Will Pierce the Heavens</title>
+<title>My Probabilistic Program Will Pierce the Heavens</title>
 <link rel="icon" type="image/jpg" href="./images/logo.png" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,8 +83,8 @@
       <h1 class="w3-xxxlarge w3-text-light-green"><b>What's this?</b></h1>
       <hr style="width:50px;border:5px solid black" class="w3-round">
       <p>
-        Welcome to Mean, Median and Mood: a not-so-well-curated collection of statistical musings from a multi-racial
-        American stuck in his parent's house during a pandemic.
+        Welcome to Mean, Median and Mood by Nick Padilla: a not-so-well-curated collection of statistical musings from a multi-racial
+        American living in Silicon Valley during a pandemic. 
       </p>
     </div>
 
@@ -99,9 +99,9 @@
         Here you'll find a collection of fun-looking graphs. I've tried to get creative with these, both in how they
         look and how they're made. I plan to use a variety of
         plotting packages to make them. Some are specified entirely in the front-end, others are made on the server and
-        then have their json specs shot across the interwebs,
+        then have their json specs shot across the inter-webs,
         and some are just hosted as static images. All of them are useless statistically. Libraries include Vega,
-        Vega-Lite, Ploty.js, PlotlyJS.jl, Makie.jl, and D3.js.
+        Vega-Lite, Plotly.js, PlotlyJS.jl, Makie.jl, and D3.js.
       </p>
     </div>
 
@@ -146,10 +146,11 @@
     <div class="w3-container" id="bnn" style="margin-top:75px">
       <h1 class="w3-xxxlarge w3-text-light-green"><b>Second season?</b></h1>
       <hr style="width:50px;border:5px solid black" class="w3-round">
-      <p>Uses data gathered from the <a href="https://myanimelist.net/">My Anime List website</a> to output the probablility that
-        a given anime series will get a second season. Under the hood, I'm using a neural network with parameters estimated via bayesian
+      <p>Uses data gathered from the <a href="https://myanimelist.net/">My Anime List website</a> to output the probability that
+        a given anime series will get a second season. Under the hood, I'm using a neural network with parameters estimated via Bayesian
         inference, specifically Hamiltonian Monte Carlo simulation. This is version 0.1, and more of a proof of concept (for myself) that models like
-        this can be run in browser. I hope to re-estimate parameters and try out more novel and interesting models in the future. 
+        this can be run in browser. I originally made this when Flux.jl was going through some significant changes and did not have up-to-date ONNX serialization support, so I re-specified the model architecture by hand in JavaScript and wrote custom code to port the model weights over.     
+	I hope to re-estimate parameters, try out more novel and interesting models in the future, and utilize a more standard model formats like ONNX for porting.  
         Model specified with Flux.jl and Turing.jl, trained with AdvancedHMC.jl, and is running in the browser with Tensorflow.js.
       </p>
     </div>
